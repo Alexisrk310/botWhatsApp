@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose.set('strictQuery', true);
 mongoose
-	.connect(process.env.MONGO_URI!)
+	.connect(process.env.MONGODB_URI!)
 	.then(() => {
 		console.log('MongoDB conectado');
 		app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
