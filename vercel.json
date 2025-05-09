@@ -2,8 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/whatsapp.ts",
+      "src": "api/**/*.ts",
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/messages",
+      "dest": "/api/messages/index.ts"
+    },
+    {
+      "src": "/api/connect",
+      "dest": "/api/connect/index.ts"
     }
   ]
 }
